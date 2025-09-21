@@ -46,8 +46,8 @@
   <div id="emoji-text">C'est moi Zazu 😎</div>
   <img id="cat" src="https://i.kym-cdn.com/entries/icons/original/000/050/540/zazu.png" alt="Zazu" />
 
-  <!-- Audio réel -->
-  <audio id="sound" src="u-werent-there.mp3" preload="auto"></audio>
+  <!-- Audio amélioré -->
+  <audio id="sound" src="u-werent-there.mp3" preload="auto" autoplay muted></audio>
 
   <div id="start-message">🔊 Tape n’importe où pour activer le son</div>
 
@@ -110,6 +110,8 @@
     const startMessage = document.getElementById("start-message");
 
     function startAudio() {
+      audio.muted = false;        // Enlève le mute
+      audio.volume = 0.2;         // Optionnel : ajuste le volume
       audio.play().catch(() => {
         console.log("Lecture audio bloquée, l’utilisateur doit interagir.");
       });
