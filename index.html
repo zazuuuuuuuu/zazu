@@ -46,8 +46,8 @@
   <div id="emoji-text">C'est moi Zazu 😎</div>
   <img id="cat" src="https://i.kym-cdn.com/entries/icons/original/000/050/540/zazu.png" alt="Zazu" />
 
-  <!-- Audio amélioré -->
-  <audio id="sound" src="u-werent-there.mp3" preload="auto" autoplay muted></audio>
+  <!-- Audio amélioré avec lien externe -->
+  <audio id="sound" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="auto" autoplay muted loop></audio>
 
   <div id="start-message">🔊 Tape n’importe où pour activer le son</div>
 
@@ -111,7 +111,7 @@
 
     function startAudio() {
       audio.muted = false;        // Enlève le mute
-      audio.volume = 0.2;         // Optionnel : ajuste le volume
+      audio.volume = 0.2;         // Volume modéré
       audio.play().catch(() => {
         console.log("Lecture audio bloquée, l’utilisateur doit interagir.");
       });
